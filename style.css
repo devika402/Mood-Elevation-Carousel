@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.header {
+  text-align: center;
+  padding: 30px 20px 10px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+#loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 80%;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+.dots {
+  text-align: center;
+  padding: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .slide img {
+    height: 350px;
+  }
+
+  .caption {
+    font-size: 1rem;
+    padding: 12px 16px;
+    bottom: 20px;
+    left: 20px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide img {
+    height: 280px;
+  }
+
+  .caption {
+    font-size: 0.95rem;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .nav {
+    font-size: 1.5rem;
+    padding: 8px 12px;
+  }
+}
